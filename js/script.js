@@ -1,5 +1,7 @@
 // Feather Icons
-feather.replace();
+document.addEventListener("DOMContentLoaded", () => {
+  feather.replace(); //render ikon setelah selesai dimuat //Solusi dari viewers
+});
 
 // Toggle class active untuk hamburger menu
 const navbarNav = document.querySelector(".navbar-nav");
@@ -58,13 +60,13 @@ itemDetailButtons.forEach((btn) => {
   };
 });
 
-// Klik tombol close modal
+// // Klik tombol close modal
 document.querySelector(".modal .close-icon").onclick = (e) => {
   itemDetailModal.style.display = "none";
   e.preventDefault();
 };
 
-// Klik di luar modal
+// // Klik di luar modal
 window.onclick = (e) => {
   if (e.target === itemDetailModal) {
     itemDetailModal.style.display = "none";
